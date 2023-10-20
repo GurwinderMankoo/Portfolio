@@ -8,7 +8,7 @@ type ModeSwitcher = (prevState: string) => void
 
 type ModeSwitcherStateType = {
     mode: Mode,
-    setMode: ModeSwitcher
+    setMode: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const ModeSwitcherState = createContext<ModeSwitcherStateType>({ mode: 'light', setMode: () => null })
