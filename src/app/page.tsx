@@ -9,7 +9,7 @@ import UpArrow from './components/common/UpArrow'
 export default function Home() {
   return (
     <>
-      <main className=" dark:bg-gray-900/90 dark:text-white">
+      <main className="light:bg-gradient-to-b from-[#D6DBDC] to-white light:text-black dark:bg-gray-900/90 dark:text-white">
         <HomeMain1 />
         <AboutMain />
         <Experience />
