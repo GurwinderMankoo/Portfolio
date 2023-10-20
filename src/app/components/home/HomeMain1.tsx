@@ -16,7 +16,7 @@ export default function HomeMain1() {
                             <span className="flex justify-center md:justify-start">
                                 <img src='/waving-hand.gif' alt='Hi!!' className='w-10 h-10 -mt-3 mr-2' />
                                 <h5 className="sm:text-xl font-bold">
-                                    Hey! I'M
+                                    {`Hey! I'M`}
                                 </h5>
                             </span>
                             <h2 className='text-3xl mt-3 md:mt-0 xl:text-6xl md:text-5xl text-blue-700'>

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import ContactMain from './components/contact/ContactMain'
-import HomeMain from './components/home/HomeMain'
 import Experience from './components/Experience/page'
 import HomeMain1 from './components/home/HomeMain1'
 import AboutMain from './components/about/AboutMain'
