@@ -1,5 +1,5 @@
 "use client"
-import { ThemeProvider } from 'next-themes'
+// import { ThemeProvider } from 'next-themes'
 import React from 'react'
 
 type Props = {
@@ -8,10 +8,11 @@ type Props = {
 
 export default function ThemeSwitcher({ children }: Props) {
     return (
-        <ThemeProvider attribute="class">
-            {
-                children
-            }
-        </ThemeProvider>
+        ''
+        // <ThemeProvider attribute="class">
+        //     {
+        //         children
+        //     }
+        // </ThemeProvider>
     )
 }
