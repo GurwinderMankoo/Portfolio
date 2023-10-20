@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/navbar/Main'
-// import ModeSwitcherProvider from './store/ModeSwitcherProvider'
+import ModeSwitcherProvider from './store/ModeSwitcherProvider'
 import ModalProvider from './store/ModalProvider'
 import ScrollObserverProvider from './store/ScrollObserver'
-import ThemeSwitcher from './components/common/ThemeSwitcher'
+// import ThemeSwitcher from './components/common/ThemeSwitcher'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -29,14 +29,14 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ScrollObserverProvider>
-          {/* <ModeSwitcherProvider> */}
-          <ThemeSwitcher>
+          <ModeSwitcherProvider>
+            {/* <ThemeSwitcher> */}
             <ModalProvider>
               <Navbar />
               {children}
             </ModalProvider>
-          </ThemeSwitcher>
-          {/* </ModeSwitcherProvider> */}
+            {/* </ThemeSwitcher> */}
+          </ModeSwitcherProvider>
         </ScrollObserverProvider>
       </body>
     </html>

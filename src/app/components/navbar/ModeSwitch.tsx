@@ -1,7 +1,7 @@
 "use client"
-// import { useModeSwitcher } from '@/app/store/ModeSwitcherProvider'
+import { useModeSwitcher } from '@/app/store/ModeSwitcherProvider'
 import React from 'react'
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 
 type Props = {
     className: string
@@ -9,8 +9,8 @@ type Props = {
 
 export default function ModeSwitch({ className }: Props) {
 
-    // const { mode, setMode } = useModeSwitcher()
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme } = useModeSwitcher()
+    // const { theme, setTheme } = useTheme()
 
 
     return (
@@ -18,7 +18,7 @@ export default function ModeSwitch({ className }: Props) {
             <a
                 role='button'
                 className={`block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${className}`}
-                onClick={() => setTheme(theme === "light" ? 'dark' : 'light')}
+                onClick={() => setTheme((prevState) => prevState === "light" ? 'dark' : 'light')}
             >
                 {
                     theme === "dark" ?
