@@ -15,7 +15,7 @@ export default function AboutMain({ }: Props) {
             <div className='flex md:justify-between justify-center flex-col md:flex-row'>
                 <div className='md:w-1/4 w-full'>
                     <Image
-                        src="/profile.jpg"
+                        src="/my-profile.jpg"
                         alt='My Pic'
                         width={300}
                         height={400}
