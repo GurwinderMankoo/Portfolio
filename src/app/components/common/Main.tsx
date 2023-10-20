@@ -11,7 +11,7 @@ export default function Main({ children }: Props) {
     const { theme } = useTheme();
 
     return (
-        <main className={`${theme === "dark" ? 'dark:bg-gray-900/90 dark:text-white' : 'ight:bg-gradient-to-b light:from-[#D6DBDC] light:to-white text-black'}`}>
+        <main className={`${theme === "dark" ? 'dark:bg-gray-900/90 dark:text-white' : 'bg-gradient-to-b from-[#D6DBDC] to-white text-black'}`}>
             {
                 children
             }

@@ -5,18 +5,22 @@ import AboutMain from './components/about/AboutMain'
 import Technologies from './components/techSection/Technologies'
 import ProjectsMain from './components/projects/ProjectsMain'
 import UpArrow from './components/common/UpArrow'
+import Main from './components/common/Main'
 
 export default function Home() {
   return (
     <>
-      <main className="bg-white text-black dark:bg-gray-900/90 dark:text-white">
+      {/* <main className="bg-white text-black dark:bg-gray-900/90 dark:text-white"> */}
+      <Main>
         <HomeMain1 />
         <AboutMain />
         <Experience />
         <Technologies />
         <ProjectsMain />
         <ContactMain />
-      </main>
+      </Main>
+
+      {/* </main> */}
       <UpArrow />
     </>
   )
