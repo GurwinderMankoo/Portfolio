@@ -9,14 +9,14 @@ import UpArrow from './components/common/UpArrow'
 export default function Home() {
   return (
     <>
-      {/* <main className="dark:bg-gray-900/90 dark:text-white -z-10"> */}
-      <HomeMain1 />
-      <AboutMain />
-      <Experience />
-      <Technologies />
-      <ProjectsMain />
-      <ContactMain />
-      {/* </main> */}
+      <main className="dark:bg-gray-900/90 dark:text-white -z-10">
+        <HomeMain1 />
+        <AboutMain />
+        <Experience />
+        <Technologies />
+        <ProjectsMain />
+        <ContactMain />
+      </main>
       <UpArrow />
     </>
   )
