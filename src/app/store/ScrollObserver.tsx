@@ -12,7 +12,7 @@ type Props = {
     children: React.ReactNode
 }
 
-export const ScrollObserverState = createContext<ScrollObserverStateType>({ activeSection: 'home', setActiveSection: () => null });
+export const ScrollObserverState = createContext<ScrollObserverStateType>({ activeSection: 'home', setActiveSection: () => null, showScrollUp: false });
 
 export const useScrollSection = () => useContext(ScrollObserverState)
 
