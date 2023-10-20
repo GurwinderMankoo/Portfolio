@@ -29,7 +29,7 @@ export default function AboutMain({ }: Props) {
                         {`Greetings, I'm Gurwinder Singh, a seasoned frontend developer with over two years of hands-on experience. My professional journey has been marked by the successful creation and enhancement of various web applications and websites. Proficient in an array of libraries—including ReactJs, NextJs, React-Router-Dom, React-Redux with Thunk middleware, Bootstrap, Material UI, Axios, Shopify-Appbridge, Polaris—I bring a wealth of technical expertise to the table.`}
                     </p>
                     <p className='mt-5 text-justify'>
-                        My work reflects a profound understanding of the React ecosystem, showcasing not only my proficiency in utilizing these tools but also a commitment to delivering polished and efficient solutions. Through my dedication to staying abreast of industry trends and my passion for creating seamless user experiences, I continue to contribute meaningfully to the dynamic world of frontend development
+                        {`My work reflects a profound understanding of the React ecosystem, showcasing not only my proficiency in utilizing these tools but also a commitment to delivering polished and efficient solutions. Through my dedication to staying abreast of industry trends and my passion for creating seamless user experiences, I continue to contribute meaningfully to the dynamic world of frontend development`}
                     </p>
                     <a className='w-fit py-2 px-4 hover:translate-y-[2px] transition-all rounded-md mt-3 bg-blue-700 text-white flex items-center m-auto md:ml-0' href="/resume.docx" download>
                         <span>
