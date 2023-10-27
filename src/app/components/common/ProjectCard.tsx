@@ -8,7 +8,7 @@ export type Project = {
     name: string,
     content: string,
     technologies: string[],
-    img: StaticImageData
+    img: StaticImageData | null
 }
 
 type Props = {

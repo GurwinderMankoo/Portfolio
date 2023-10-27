@@ -21,7 +21,7 @@ type ModalStatetype = {
     setState: SetState
 }
 
-const initialState = { name: '', content: '', url: '', id: -1, technologies: [''] }
+const initialState = { name: '', content: '', url: '', id: -1, technologies: [''], img: null }
 
 const ModalState = createContext<ModalStatetype>({
     openModal: (project) => null,
