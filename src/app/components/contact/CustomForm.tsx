@@ -96,8 +96,7 @@ export default function CustomForm({ }: Props) {
             }
 
         } catch (error) {
-            console.log(error);
-
+            setIsLoading(false)
         }
     }
 
