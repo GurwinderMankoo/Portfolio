@@ -10,32 +10,34 @@ import Notifier from '../common/Notifier'
 
 type Props = {}
 
-export type ContactErrors = {
-    email: string;
-    subject: string;
-    message: string
-}
 
 type name = 'email' | 'subject' | 'message'
+
+export type ContactErrors = {
+    [k: string]: string;
+}
+
+type FormType = {
+    [k: string]: string
+}
 
 const URL = process.env.URL
 
 export default function CustomForm({ }: Props) {
 
-    const [form, setForm] = useState({
+    const [form, setForm] = useState<FormType>({
         email: '',
         subject: '',
         message: ''
     })
     const [isLoading, setIsLoading] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
     const notifierRef = useRef<HTMLDialogElement>(null)
 
     const [errors, setErrors] = useState<Partial<ContactErrors>>({})
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const value = e.target.value;
-        const name: name = e.target.name;
+        const name = e.target.name;
         setForm((prev) => ({
             ...prev,
             [name]: value

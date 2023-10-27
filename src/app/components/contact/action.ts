@@ -1,9 +1,7 @@
 'use server'
 
 type ContactForm = {
-    email: string;
-    subject: string;
-    message: string
+    [k:string]: string
 }
 
 const URL = process.env.URL
