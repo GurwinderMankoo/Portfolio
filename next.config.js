@@ -4,7 +4,7 @@ const nextConfig = {
         serverActions: true,
     },
     env: {
-        "URL": "http://localhost:3000/api"
+        "URL": "https://gurwinder.vercel.app/api"
     }
 }
 

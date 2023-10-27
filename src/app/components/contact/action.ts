@@ -12,7 +12,6 @@ interface Errors extends ErrorConstructor {
 }
 
 export async function contactUs(data: ContactForm) {
-    console.log(`${URL}`)
     const res = await fetch(`${URL}/contact-us`, {
         method: "POST",
         headers: {
@@ -21,7 +20,6 @@ export async function contactUs(data: ContactForm) {
         body: JSON.stringify(data)
     })
     const response = await res.json();
-    console.log(response, "response")
     return {
         ok: res.ok,
         status: res.status,
