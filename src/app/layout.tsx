@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/navbar/Main'
-import ModeSwitcherProvider from './store/ModeSwitcherProvider'
 import ModalProvider from './store/ModalProvider'
 import ScrollObserverProvider from './store/ScrollObserver'
 import ThemeSwitcher from './components/common/ThemeSwitcher'
@@ -29,14 +28,12 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ScrollObserverProvider>
-          {/* <ModeSwitcherProvider> */}
           <ThemeSwitcher>
             <ModalProvider>
               <Navbar />
               {children}
             </ModalProvider>
           </ThemeSwitcher>
-          {/* </ModeSwitcherProvider> */}
         </ScrollObserverProvider>
       </body>
     </html>

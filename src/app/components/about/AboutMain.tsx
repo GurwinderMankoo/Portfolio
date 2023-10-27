@@ -1,8 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
+
 import Section from '../common/Section'
 import SectionHeading from '../common/SectionHeading'
-import Image from 'next/image'
 import DownloadIcon from '../common/DownloadIcon'
+
+import MyPic from "../../../../public/my-profile.png"
 
 type Props = {}
 
@@ -14,16 +17,22 @@ export default function AboutMain({ }: Props) {
             </SectionHeading>
             <div className='flex md:justify-between justify-center flex-col md:flex-row'>
                 <div className='md:w-1/4 w-full'>
-                    <Image
-                        src="/my-profile.jpg"
-                        alt='My Pic'
-                        width={300}
-                        height={400}
-                        className='rounded-md shadow-md m-auto md:mb-0 md-5'
-                    />
+                    <div className='w-72 h-72 relative m-auto'>
+                        <Image
+                            src={MyPic}
+                            alt='My Pic'
+                            // width={300}
+                            // height={400}
+                            fill
+                            placeholder='blur'
+                            loading='lazy'
+                            className='rounded-md shadow-md m-auto md:mb-0 md-5'
+                        />
+
+                    </div>
                 </div>
                 <div className='md:w-4/6 w-full text-center md:text-left mt-5 md:mt-0'>
-                    <h2 className='text-xl md:text-4xl font-bold'>Gurwinder Singh</h2>
+                    <h2 className='text-xl md:text-4xl font-bold dark:text-white'>Gurwinder Singh</h2>
                     <p className='mt-2 p-2 inline-block font-semibold text-blue-700 bg-blue-200 rounded-md dark:bg-gray-700 '>Front-End Engineer</p>
                     <p className='mt-5 text-justify'>
                         Greetings, I&apos;m Gurwinder Singh, a seasoned frontend developer with over two years of hands-on experience. My professional journey has been marked by the successful creation and enhancement of various web applications and websites. Proficient in an array of libraries—including ReactJs, NextJs, React-Router-Dom, React-Redux with Thunk middleware, Bootstrap, Material UI, Axios, Shopify-Appbridge, Polaris—I bring a wealth of technical expertise to the table.

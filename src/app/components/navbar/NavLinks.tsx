@@ -1,11 +1,9 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import ModeSwitch from './ModeSwitch'
 import { links } from './Main'
-import Link from 'next/link'
 import { useScrollSection } from '@/app/store/ScrollObserver'
 
 type Props = {}
@@ -14,12 +12,16 @@ export default function NavLinks({ }: Props) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [currentPath, setCurrentPath] = useState('')
-    const route = useRouter()
-    const pathName = usePathname();
-    const searchParams = useSearchParams()
     const { activeSection } = useScrollSection()
-
+    const [isMounted, setIsMounted] = useState(false)
+        ;
     const pathHandler = (path: string) => setCurrentPath(path)
+
+    useEffect(() => {
+        setIsMounted(true)
+
+        return () => setIsMounted(false)
+    }, [])
 
     useEffect(() => {
         if (activeSection !== "technologies")
@@ -29,7 +31,7 @@ export default function NavLinks({ }: Props) {
     return (
         <>
             <div className='flex mr-2 justify-center items-center'>
-                <ModeSwitch className="block md:hidden" />
+                {isMounted && <ModeSwitch className="block md:hidden" />}
                 <button
                     data-collapse-toggle="navbar-default"
                     type="button"
@@ -63,7 +65,7 @@ export default function NavLinks({ }: Props) {
                             </li>
                         ))
                     }
-                    <ModeSwitch className="md:block hidden" />
+                    {isMounted && <ModeSwitch className="md:block hidden" />}
                 </ul>
             </div>
         </>

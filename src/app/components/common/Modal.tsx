@@ -52,7 +52,7 @@ export default function Modal({ title = "Title", description, technologies, url 
                         ))
                     }
                 </ul>
-                <a href={url} target='_blank' className='font-medium text-blue-600 hover:underline flex items-center'>
+                {url && <a href={url} target='_blank' className='font-medium text-blue-600 hover:underline flex items-center'>
                     <span className='mr-1'>
                         <Image
                             src='/icons/external-link.svg'
@@ -65,7 +65,7 @@ export default function Modal({ title = "Title", description, technologies, url 
                     {
                         url
                     }
-                </a>
+                </a>}
                 {/* <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
                 </p> */}
