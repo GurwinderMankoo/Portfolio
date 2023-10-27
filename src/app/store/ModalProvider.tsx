@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction, createContext, useContext, useEffect, useRef,
 import { Project } from "../components/common/ProjectCard"
 import Modal from "../components/common/Modal"
 
+import DummyImage from "../../../public/placeholder.png"
 
 type Props = {
     children: React.ReactNode
@@ -21,7 +22,7 @@ type ModalStatetype = {
     setState: SetState
 }
 
-const initialState = { name: '', content: '', url: '', id: -1, technologies: [''], img: null }
+const initialState = { name: '', content: '', url: '', id: -1, technologies: [''], img: DummyImage }
 
 const ModalState = createContext<ModalStatetype>({
     openModal: (project) => null,
