@@ -14,5 +14,5 @@ const Notifier = forwardRef<Ref, Props>(({ children }, ref) => (
         </span>
     </dialog>
 ));
-
+Notifier.displayName = 'Notifier'
 export default Notifier
