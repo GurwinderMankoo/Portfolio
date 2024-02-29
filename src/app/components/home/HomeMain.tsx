@@ -5,7 +5,6 @@ import DownArrow from "../common/DownArrow";
 import MyImage from "../../../../public/profile-pic-square.png";
 
 
-
 export default function HomeMain1() {
     return (
         <Section id="home">
